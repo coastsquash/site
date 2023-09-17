@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import Header from "./components/Header";
+import Layout from "./components/Layout";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import League from "./pages/League";
@@ -16,7 +16,7 @@ import "./App.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Header />}>
+    <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="league" element={<League />} />

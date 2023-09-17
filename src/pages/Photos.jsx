@@ -1,6 +1,7 @@
 const Photos = () => (
-  <main role="main" className="w-full grow bg-slate-100 p-8">
-  </main>
+  <>
+    <p className="text-4xl font-bold">Photos</p>
+  </>
 );
 
 export default Photos;
