@@ -19,7 +19,7 @@ const LogoHeader = () => (
 
 const MenuButton = ({ children, path }) => (
   <Link to={path}>
-    <button className="text-slate-300 w-24 h-20 hover:bg-slate-700">
+    <button className="text-slate-300 w-24 h-20 hover:bg-slate-700 hover:border-b-2">
       {children}
     </button>
   </Link>
