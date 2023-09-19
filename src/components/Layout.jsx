@@ -55,11 +55,11 @@ const Layout = () => (
   <>
     <Header />
     <Menu />
-    <main role="main" className="w-full grow bg-slate-100 p-8">
-      <div className=" mx-auto max-w-[1280px]">
+    <div className="bg-slate-300 w-full grow">
+      <main role="main" className="w-full p-8 mx-auto max-w-[1280px]">
         <Outlet />
-      </div>
-    </main>
+      </main>
+    </div>
   </>
 );
 
