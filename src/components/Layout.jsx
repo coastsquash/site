@@ -1,5 +1,8 @@
+import { useMediaQuery } from "@uidotdev/usehooks";
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import { BiMenu } from "react-icons/bi";
 
 import logo from "../assets/logo.png";
 
@@ -17,17 +20,22 @@ const Header = () => (
   </div>
 );
 
-const MenuButton = ({ children, path }) => {
+const MenuButton = ({ children, path, onClick }) => {
   const location = useLocation();
+  const isMobile = useMediaQuery("only screen and (max-width: 768px)");
 
   const isActive = location.pathname === path;
 
-  const buttonClasses = "text-slate-300 w-32 h-20 border-b-2 border-slate-800 hover:bg-slate-700 hover:border-b-2 hover:border-slate-200";
+  const linkClasses = isMobile ? "w-full" : "w-32";
+  const baseClasses = "text-slate-300 border-b-2 border-slate-800 hover:bg-slate-700";
+  const buttonClasses = isMobile
+    ? `${baseClasses} w-full h-20 bg-slate-800 hover:border-b-2 hover:border-slate-200`
+    : `${baseClasses} w-32 h-20 hover:border-b-2 hover:border-slate-200`;
   const classes = isActive ? `${buttonClasses} bg-slate-700 border-b-2 border-slate-200` : buttonClasses;
 
   return (
-    <Link to={path}>
-      <button className={classes}>
+    <Link to={path} className={linkClasses}>
+      <button className={classes} onClick={onClick}>
         {children}
       </button>
     </Link>
@@ -37,19 +45,58 @@ const MenuButton = ({ children, path }) => {
 MenuButton.propTypes = {
   children: PropTypes.node.isRequired,
   path: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
 };
 
-const Menu = () => (
-  <div className="flex h-20 w-full items-center bg-slate-800 drop-shadow-xl">
-    <div className="flex mx-auto max-w-[1280px] items-center">
-      <MenuButton path="/">Home</MenuButton>
-      <MenuButton path="/league">League</MenuButton>
-      <MenuButton path="/members">Members</MenuButton>
-      <MenuButton path="/photos">Photos</MenuButton>
-      <MenuButton path="/about">About</MenuButton>
-    </div>
-  </div>
-);
+MenuButton.defaultProps = {
+  onClick: null,
+};
+
+const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMediaQuery("only screen and (max-width: 768px)");
+  // const isTablet = useMediaQuery("only screen and (min-width : 769px) and (max-width: 1024px)");
+  // const isDesktop = useMediaQuery("only screen and (min-width: 1025px)");
+
+  const handleOnClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    isMobile ? (
+      <div className="flex h-20 w-full items-center bg-slate-800 drop-shadow-xl">
+        <div className="flex flex-col w-full max-w-[768px] items-center">
+          <button className="h-20 w-full ml-8" onClick={handleOnClick}>
+            <BiMenu color="white" size="32px" />
+          </button>
+          {isOpen && (
+            <div className="absolute top-20 w-full">
+              <MenuButton onClick={handleClose} path="/">Home</MenuButton>
+              <MenuButton onClick={handleClose} path="/league">League</MenuButton>
+              <MenuButton onClick={handleClose} path="/members">Members</MenuButton>
+              <MenuButton onClick={handleClose} path="/photos">Photos</MenuButton>
+              <MenuButton onClick={handleClose} path="/about">About</MenuButton>
+            </div>
+          )}
+        </div>
+      </div>
+    ) : (
+      <div className="flex h-20 w-full items-center bg-slate-800 drop-shadow-xl">
+        <div className="flex mx-auto max-w-[1280px] items-center">
+          <MenuButton path="/">Home</MenuButton>
+          <MenuButton path="/league">League</MenuButton>
+          <MenuButton path="/members">Members</MenuButton>
+          <MenuButton path="/photos">Photos</MenuButton>
+          <MenuButton path="/about">About</MenuButton>
+        </div>
+      </div>
+    )
+  );
+};
 
 const Layout = () => (
   <>
