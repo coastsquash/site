@@ -1,12 +1,25 @@
 import PropTypes from "prop-types";
 
-const EmailLink = ({ phone, children }) => (
-  <a href={`tel:${phone}`}>{children}</a>
-);
+const PhoneLink = ({ phone, children, className, inline }) => {
+  const renderLink = <a href={`tel:${phone}`}>{children}</a>;
 
-EmailLink.propTypes = {
-  phone: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  return inline ? (
+    <span className={className}>{renderLink}</span>
+  ) : (
+    <div className={className}>{renderLink}</div>
+  );
 };
 
-export default EmailLink;
+PhoneLink.propTypes = {
+  phone: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  inline: PropTypes.bool,
+};
+
+PhoneLink.defaultProps = {
+  className: null,
+  inline: false,
+};
+
+export default PhoneLink;
