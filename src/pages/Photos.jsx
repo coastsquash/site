@@ -1,7 +1,9 @@
+import { Panel } from "../components/Panel";
+
 const Photos = () => (
-  <>
-    <p className="text-4xl font-bold">Photos</p>
-  </>
+  <Panel title="Photos">
+    <Panel.Section title="Check back later..." />
+  </Panel>
 );
 
 export default Photos;

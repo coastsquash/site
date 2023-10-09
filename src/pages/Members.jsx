@@ -2,6 +2,7 @@
 // import { Resend } from "resend";
 
 // import SignUp from "../emails/SignUp";
+import { EmailLink } from "../components";
 import { Panel } from "../components/Panel";
 
 // const SignUpForm = () => {
@@ -54,12 +55,54 @@ import { Panel } from "../components/Panel";
 // };
 
 const Members = () => (
-  <>
-    <Panel title="Members">
-      <p className="text-xl pt-2">Sign Up</p>
+  <Panel title="Members">
+    <Panel.Section title="Member request">
+      <p>
+        To view a list of players on the sunshine coast email
+        <EmailLink className="mx-1" email="coastsquash@gmail.com" inline>
+          coastsquash@gmail.com
+        </EmailLink>
+        requesting the list.
+      </p>
+    </Panel.Section>
+    <Panel.Section title="Sign up" className="mt-4">
       {/* <SignUpForm /> */}
-    </Panel>
-  </>
+      <p>
+        To be added to the list send an email to
+        <EmailLink className="mx-1" email="coastsquash@gmail.com" inline>
+          coastsquash@gmail.com
+        </EmailLink>
+        with the following information.
+        Please supply the following information if you wish to be on the Coast Squash List:
+      </p>
+      <div className="flex flex-col">
+        <div className="flex flex-row">
+          <div className="w-[196px]">Name:</div>
+          <div className="w-[512px] border-b-2 border-slate-500">&nbsp;</div>
+        </div>
+        <div className="flex flex-row">
+          <div className="w-[196px]">Age:</div>
+          <div className="w-[512px] border-b-2 border-slate-500">&nbsp;</div>
+        </div>
+        <div className="flex flex-row">
+          <div className="w-[196px]">Phone:</div>
+          <div className="w-[512px] border-b-2 border-slate-500">&nbsp;</div>
+        </div>
+        <div className="flex flex-row">
+          <div className="w-[196px]">Email:</div>
+          <div className="w-[512px] border-b-2 border-slate-500">&nbsp;</div>
+        </div>
+        <div className="flex flex-row">
+          <div className="w-[196px]">Level:</div>
+          <div className="w-[512px] border-b-2 border-slate-500 text-slate-500 italic">(Beginner / Intermediate / Advanced)</div>
+        </div>
+        <div className="flex flex-row">
+          <div className="w-[196px]">Prefered playing time(s):</div>
+          <div className="w-[512px] border-b-2 border-slate-500">&nbsp;</div>
+        </div>
+      </div>
+    </Panel.Section>
+  </Panel>
 );
 
 export default Members;
