@@ -1,6 +1,10 @@
+import { Panel } from "../components/Panel";
+
 const Home = () => (
   <>
-    <p className="text-4xl font-bold">Home</p>
+    <Panel title="Home">
+      <p className="text-lg font-bold">More to come.</p>
+    </Panel>
   </>
 );
 

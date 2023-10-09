@@ -1,4 +1,4 @@
-import Panel from "../components/Panel";
+import { Panel } from "../components/Panel";
 
 const League = () => (
   <>
