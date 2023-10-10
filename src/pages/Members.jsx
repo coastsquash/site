@@ -103,7 +103,7 @@ const Members = () => (
       </div>
     </Panel.Section>
     <Panel.Section title="Test" className="mt-4">
-      <form action="http://top2.nearest.of.coastsquash-mailer.internal:8080/">
+      <form action="https://coastsquash-mailer.fly.dev/">
         <button className="border-none" type="submit">Test</button>
       </form>
     </Panel.Section>
