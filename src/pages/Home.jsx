@@ -39,12 +39,14 @@ const Home = () => (
           contact you once the racket is restrung and returned to the Gibsons
           community center.
         </p>
-        <p>Contact Murray:</p>
-        <div>
-          Email: <EmailLink email="mujsmith34@gmail.com" inline>mujsmith34@gmail.com</EmailLink>
-        </div>
-        <div>
-          Phone: <CallLink phone="604-885-7438" inline>604-885-7438</CallLink>
+        <p className="underline">Contact Murray</p>
+        <div className="ml-2">
+          <div>
+            Email: <EmailLink email="mujsmith34@gmail.com" inline>mujsmith34@gmail.com</EmailLink>
+          </div>
+          <div>
+            Phone: <CallLink phone="604-885-7438" inline>604-885-7438</CallLink>
+          </div>
         </div>
       </div>
       <div className="flex flex-col gap-2">
@@ -55,12 +57,14 @@ const Home = () => (
           Cathy also provides expert racquet stringing and will provide you with
           demo racquets for testing. Special orders? No problem.
         </p>
-        <p>Contact Cathy:</p>
-        <div>
-          Email: <EmailLink email="ccsquashshop@gmail.com" inline>ccsquashshop@gmail.com</EmailLink>
-        </div>
-        <div>
-          Phone: <CallLink phone="604-787-3097" inline>604-787-3097</CallLink>
+        <p className="underline">Contact Cathy</p>
+        <div className="ml-2">
+          <div>
+            Email: <EmailLink email="ccsquashshop@gmail.com" inline>ccsquashshop@gmail.com</EmailLink>
+          </div>
+          <div>
+            Phone: <CallLink phone="604-787-3097" inline>604-787-3097</CallLink>
+          </div>
         </div>
       </div>
     </Panel.Section>

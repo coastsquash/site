@@ -102,6 +102,11 @@ const Members = () => (
         </div>
       </div>
     </Panel.Section>
+    <Panel.Section title="Test" className="mt-4">
+      <form action="http://coastsquash-mailer.internal:8080/">
+        <button className="border-none" type="submit">Test</button>
+      </form>
+    </Panel.Section>
   </Panel>
 );
 
