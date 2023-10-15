@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-const PhoneLink = ({ phone, children, className, inline }) => {
-  const renderLink = <a href={`tel:${phone}`}>{children}</a>;
+const PhoneLink = ({ to, children, className, inline }) => {
+  const renderLink = <a href={`tel:${to}`}>{children}</a>;
 
   return inline ? (
     <span className={className}>{renderLink}</span>
@@ -11,7 +11,7 @@ const PhoneLink = ({ phone, children, className, inline }) => {
 };
 
 PhoneLink.propTypes = {
-  phone: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   inline: PropTypes.bool,

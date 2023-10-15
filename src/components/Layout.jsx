@@ -78,8 +78,10 @@ const Menu = () => {
               <MenuButton onClick={handleClose} path="/">Home</MenuButton>
               <MenuButton onClick={handleClose} path="/league">League</MenuButton>
               <MenuButton onClick={handleClose} path="/members">Members</MenuButton>
-              <MenuButton onClick={handleClose} path="/photos">Photos</MenuButton>
-              <MenuButton onClick={handleClose} path="/about">About</MenuButton>
+              <MenuButton onClick={handleClose} path="/lessons">Lessons</MenuButton>
+              <MenuButton onClick={handleClose} path="/juniors">Juniors</MenuButton>
+              <MenuButton onClick={handleClose} path="/recordings">Recordings</MenuButton>
+              <MenuButton onClick={handleClose} path="/misc">Misc</MenuButton>
             </div>
           )}
         </div>
@@ -90,8 +92,10 @@ const Menu = () => {
           <MenuButton path="/">Home</MenuButton>
           <MenuButton path="/league">League</MenuButton>
           <MenuButton path="/members">Members</MenuButton>
-          <MenuButton path="/photos">Photos</MenuButton>
-          <MenuButton path="/about">About</MenuButton>
+          <MenuButton path="/lessons">Lessons</MenuButton>
+          <MenuButton path="/juniors">Juniors</MenuButton>
+          <MenuButton path="/recordings">Recordings</MenuButton>
+          <MenuButton path="/misc">Misc</MenuButton>
         </div>
       </div>
     )

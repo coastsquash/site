@@ -6,11 +6,15 @@ import {
 } from "react-router-dom";
 
 import Layout from "./components/Layout";
-import About from "./pages/About";
-import Home from "./pages/Home";
-import League from "./pages/League";
-import Members from "./pages/Members";
-import Photos from "./pages/Photos";
+import {
+  Home,
+  Juniors,
+  League,
+  Lessons,
+  Members,
+  Misc,
+  Recordings,
+} from "./pages";
 
 import "./App.css";
 
@@ -18,10 +22,12 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
       <Route path="league" element={<League />} />
       <Route path="members" element={<Members />} />
-      <Route path="photos" element={<Photos />} />
+      <Route path="lessons" element={<Lessons />} />
+      <Route path="juniors" element={<Juniors />} />
+      <Route path="recordings" element={<Recordings />} />
+      <Route path="misc" element={<Misc />} />
     </Route>,
   ),
 );
