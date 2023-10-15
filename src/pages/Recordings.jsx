@@ -49,7 +49,7 @@ const Recordings = () => (
       <Panel.Subsection title="Youtube channel">
         <span>
           Youtube channel is under “Sunshine Coast Squash Association.” Youtube Link:
-          <a className="mx-2" href="https://www.youtube.com/watch?v=vu1WWyRBN-o">
+          <a className="mx-2" href="https://www.youtube.com/watch?v=vu1WWyRBN-o" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faYoutube} /> GoPro recordings trailer
           </a>
           shows particulars on the service that is offered with examples of
@@ -72,7 +72,7 @@ const Recordings = () => (
         </ul>
       </Panel.Subsection>
       <Panel.Subsection title="Link example">
-        <a href="https://www.youtube.com/playlist?list=PL-v-l8A2C284nraR0ECqjMvjT1qcjOA4K">
+        <a href="https://www.youtube.com/playlist?list=PL-v-l8A2C284nraR0ECqjMvjT1qcjOA4K" target="_blank" rel="noreferrer">
           https://www.youtube.com/playlist?list=PL-v-l8A2C284nraR0ECqjMvjT1qcjOA4K
         </a>
         <p>
@@ -123,7 +123,7 @@ const Recordings = () => (
             <span>
               Murray will watch a game and then send a written analysis on technique,
               strategy, tactics, rules, and safety.<br />Link example:
-              <a className="mx-2" href="https://www.youtube.com/watch?v=90Qs3_OEG-M">
+              <a className="mx-2" href="https://www.youtube.com/watch?v=90Qs3_OEG-M" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faYoutube} /> remote coaching option 1 - Coach Murray - example game - Chris vs Sven
               </a>
             </span>
@@ -138,11 +138,16 @@ const Recordings = () => (
             </span>
             <span>
               5 minutes of playing time (analysis roughly 20 minutes).<br />Link example:
-              <a className="mx-2" href="https://www.youtube.com/watch?v=7PzZ9nvh2w4">
+              <a className="mx-2" href="https://www.youtube.com/watch?v=7PzZ9nvh2w4" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faYoutube} /> remote coaching option 2 - Coach Phillip - example game - Remi vs Sven
               </a>
             </span>
-            <p>website: </p><a href="https://bettersquash.com">https://bettersquash.com</a>
+            <p>
+              website:
+              <a className="mx-2" href="https://bettersquash.com" target="_blank" rel="noreferrer">
+                https://bettersquash.com
+              </a>
+            </p>
           </div>
         </li>
         <li className="flex flex-row gap-4 pb-4">
@@ -155,7 +160,7 @@ const Recordings = () => (
               3 tips/pointers will be given for the beginner/intermediate level. Although I have
               attended a coaching course, consider this simply a perspective with 3 suggestions
               from a fellow player.<br />Link example:
-              <a className="mx-2" href="https://youtu.be/h023Qvj2uXw">
+              <a className="mx-2" href="https://youtu.be/h023Qvj2uXw" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faYoutube} /> remote coaching option 3 - Coach Sven - example game - Damien vs Sven
               </a>
             </span>
@@ -174,7 +179,9 @@ const Recordings = () => (
             </span>
             <p>
               website:
-              <a className="mx-2" href="www.crosscourtanalytics.com">www.crosscourtanalytics.com</a>
+              <a className="mx-2" href="https://www.crosscourtanalytics.com" target="_blank" rel="noreferrer">
+                https://www.crosscourtanalytics.com
+              </a>
             </p>
           </div>
         </li>
@@ -188,7 +195,12 @@ const Recordings = () => (
               The offer 3 packages including technical & tactical assessment, training evaluation,
               and meeting online with a coach.
             </span>
-            <p>website: </p><a href="https://squashdynamics.com/online-coaching/">https://squashdynamics.com/online-coaching/</a>
+            <p>
+              website:
+              <a className="mx-2" href="https://squashdynamics.com/online-coaching/" target="_blank" rel="noreferrer">
+                https://squashdynamics.com/online-coaching/
+              </a>
+            </p>
           </div>
         </li>
       </ul>

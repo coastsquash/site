@@ -2,7 +2,15 @@ import { EmailLink, PhoneLink } from "../components";
 import { Panel } from "../components/Panel";
 
 const Photos = () => (
-  <Panel title="Miscellaneous Services">
+  <Panel title="Miscellaneous Information">
+    <Panel.Section title="Youtube">
+      <span>
+        You can find the Sunshine Coast Squash Association on Youtube at
+        <a className="mx-2" href="https://www.youtube.com/@Sventheunissenrecordings" target="_blank" rel="noreferrer">
+          https://www.youtube.com/@Sventheunissenrecordings
+        </a>
+      </span>
+    </Panel.Section>
     <Panel.Section className="mt-4" title="Racket Restringing">
       <div className="flex flex-col gap-2">
         <p>
