@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-const EmailLink = ({ to, children, className, inline }) => {
-  const renderLink = <a href={`mailto:${to}`}>{children || to}</a>;
+const SmsLink = ({ to, children, className, inline }) => {
+  const renderLink = <a href={`sms:${to}`}>{children || to}</a>;
 
   return inline ? (
     <span className={className}>{renderLink}</span>
@@ -10,17 +10,17 @@ const EmailLink = ({ to, children, className, inline }) => {
   );
 };
 
-EmailLink.propTypes = {
+SmsLink.propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
   inline: PropTypes.bool,
 };
 
-EmailLink.defaultProps = {
+SmsLink.defaultProps = {
   children: null,
   className: null,
   inline: false,
 };
 
-export default EmailLink;
+export default SmsLink;

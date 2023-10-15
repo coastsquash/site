@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 import Section from "./Section";
+import Subsection from "./Subsection";
 
 const Panel = ({ children, className, title }) => (
   <div className={className}>
@@ -23,5 +24,6 @@ Panel.defaultProps = {
 };
 
 Panel.Section = Section;
+Panel.Subsection = Subsection;
 
 export default Panel;
