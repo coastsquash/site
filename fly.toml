@@ -1,8 +1,12 @@
+# fly.toml app configuration file generated for coastsquash on 2023-10-30T14:46:56-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = "coastsquash"
 primary_region = "sea"
 kill_signal = "SIGINT"
-kill_timeout = 5
-processes = []
+kill_timeout = "5s"
 
 [build]
 
