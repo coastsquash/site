@@ -1,6 +1,8 @@
 import { EmailLink, PhoneLink } from "../components";
 import { Panel } from "../components/Panel";
 
+import murrayImage from "../assets/murray.jpg";
+
 const Photos = () => (
   <Panel title="Lessons">
     <Panel.Section title="Lessons">
@@ -11,17 +13,23 @@ const Photos = () => (
         (all levels)
       </div>
       <div className="border-l-2 border-l-slate-400 pl-2">
-        <p>
-          {`Hi, I'm a squash coach teaching out of the Gibsons Community Center in Gibsons, BC.
-          I've coached in various BC communities over the past 27 years, receiving my
-          Level 3 - Technical, squash coaching certification, in 2006.From 2007 – 2008,
-          I was the Assistant Coach with Squash BC's High Performance, and Developing Player
-          Junior Programs.Since 2008, I have coordinated the Junior Squash Program, and Adult
-          Coaching.`}
-        </p>
-        <p className="mt-2">
-          3 lessons for $100
-        </p>
+        <div className="flex flex-row">
+          <div className="w-1/3 pr-2 min-w-[100px]">
+            <img src={murrayImage} alt="Murray" />
+          </div>
+          <div className="grow">
+            <p>
+              {`Murray has coached in various BC communities over the past 27 years, attaining his
+              Level 3 - Technical: Squash Coaching Certification in 2006. He was the Assistant Coach
+              with Squash BC's High Performance, as well as Developing Player Junior Programs from
+              2006 - 2007.  Since 2008, he has coordinated the SCRD Junior Squash Program, as well
+              as provided adult coaching on the Sunshine Coast`}
+            </p>
+            <p className="mt-2">
+              3 lessons for $100
+            </p>
+          </div>
+        </div>
       </div>
       <div>
         Gord: $40 per hour - contact:&nbsp;
