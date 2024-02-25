@@ -7,7 +7,7 @@ const Home = () => (
   <Panel title="Home">
     <Panel.Section title="Welcome to Coast Squash! Home of squash on the Sunshine Coast.">
       <p>The purpose of this site is to connect squash players on B.C’s Sunshine Coast.</p>
-      <p>
+      <p className="pl-2 border-l-2 border-l-slate-400">
         The Gibson’s Community centre offers a dedicated squash court as well as a court that
         can be converted between a racquetball and a squash court. Bookings can be made on line at
         <a className="mx-[0.5em]" href="https://www.scrd.ca/community-centre/">
@@ -36,7 +36,10 @@ const Home = () => (
           </div>
           <div className="flex flex-row">
             <div className="w-[196px]">Murray Smith:</div>
-            <PhoneLink to="604-885-7438">604-885-7438</PhoneLink>
+            <PhoneLink to="604-989-9111" />
+          </div>
+          <div className="flex flex-row border-l-2 border-l-slate-400">
+            <p className="pl-2">Murray is the Manta World Sports squash rep for the Sunshine Coast.</p>
           </div>
         </div>
       </div>

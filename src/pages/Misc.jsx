@@ -6,7 +6,12 @@ const Photos = () => (
     <Panel.Section title="Youtube">
       <span>
         You can find the Sunshine Coast Squash Association on Youtube at
-        <a className="mx-2" href="https://www.youtube.com/@Sventheunissenrecordings" target="_blank" rel="noreferrer">
+        <a
+          className="mx-2"
+          href="https://www.youtube.com/@Sventheunissenrecordings"
+          target="_blank"
+          rel="noreferrer"
+        >
           https://www.youtube.com/@Sventheunissenrecordings
         </a>
       </span>
@@ -14,19 +19,21 @@ const Photos = () => (
     <Panel.Section className="mt-4" title="Racket Restringing">
       <div className="flex flex-col gap-2">
         <p>
-          Sunshine Coast – Murray Smith – leave your racket with the staff at the
-          Gibsons rec centre and paper wrap your grip with your contact info.
-          Contact Murray to let him know that the racket is there.  He will
-          contact you once the racket is restrung and returned to the Gibsons
+          Sunshine Coast – Murray Smith has squash racquets, grips, balls,
+          glasses for sale. He also has squash racquet demos for use. For
+          restringing, leave your racquet with the staff at the Gibsons rec
+          centre and paper wrap your grip with your contact info. Contact
+          Murray to let him know that the racquet is there. He will contact
+          you once the racquet is restrung and returned to the Gibsons
           community center.
         </p>
         <p className="underline">Contact Murray</p>
         <div className="ml-2">
           <div>
-            Email: <EmailLink to="mujsmith34@gmail.com" inline>mujsmith34@gmail.com</EmailLink>
+            Email: <EmailLink to="mujsmith34@gmail.com" inline />
           </div>
           <div>
-            Phone: <PhoneLink to="604-885-7438" inline>604-885-7438</PhoneLink>
+            Phone: <PhoneLink to="604-989-9111" inline />
           </div>
         </div>
       </div>
@@ -41,10 +48,10 @@ const Photos = () => (
         <p className="underline">Contact Cathy</p>
         <div className="ml-2">
           <div>
-            Email: <EmailLink to="ccsquashshop@gmail.com" inline>ccsquashshop@gmail.com</EmailLink>
+            Email: <EmailLink to="ccsquashshop@gmail.com" inline />
           </div>
           <div>
-            Phone: <PhoneLink to="604-787-3097" inline>604-787-3097</PhoneLink>
+            Phone: <PhoneLink to="604-787-3097" inline />
           </div>
         </div>
       </div>
