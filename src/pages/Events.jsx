@@ -12,7 +12,7 @@ const Events = () => (
             players participated in the clinic facilitated by National Referee Mike
             Tooley.
           </p>
-          <img className="flex" src={eventImage} alt="Clinic" />
+          <img className="flex sm:h-96" src={eventImage} alt="Clinic" />
         </div>
       </Panel.Section>
     </Panel>
