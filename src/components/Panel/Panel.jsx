@@ -6,7 +6,7 @@ import Subsection from "./Subsection";
 const Panel = ({ children, className, title }) => (
   <div className={className}>
     { title && <p className="text-4xl font-bold mb-8">{title}</p>}
-    <div className="bg-slate-100 border border-slate-400 px-8 pb-8 pt-4 solid shadow-xl">
+    <div className="bg-white border border-slate-300 px-8 pb-8 pt-4 solid shadow-lg rounded-xl">
       {children}
     </div>
   </div>
