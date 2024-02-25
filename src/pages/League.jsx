@@ -1,4 +1,5 @@
 import { Panel } from "../components/Panel";
+import { EmailLink } from "../components";
 
 const League = () => (
   <Panel title="League">
@@ -35,7 +36,7 @@ const League = () => (
             player continuously regardless who served.
           </li>
           <li>
-            Point a Rally (15) -game to 15 points, where points are scored for each
+            Point a Rally (15) - game to 15 points, where points are scored for each
             player continuously regardless who served.
           </li>
         </ol>
@@ -79,7 +80,7 @@ const League = () => (
       </li>
       <li>
         After each match you record the result at the community center on the box sheet
-        and/or email <a href="mailto:coastsquash@gmail.com">coastsquash@gmail.com</a>
+        and/or email <EmailLink className="pr-1" to="coastsquash@gmail.com" inline />
         with the results.
       </li>
       <li>

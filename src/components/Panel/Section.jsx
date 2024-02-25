@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const Section = ({ children, className, title }) => (
   <div className={`flex flex-col gap-4 ${className}`}>
-    {title && <p className="text-lg font-bold">{title}</p>}
+    {title && <p className="text-lg text-slate-800 font-bold">{title}</p>}
     {children}
   </div>
 );
