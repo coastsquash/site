@@ -27,11 +27,11 @@ const MenuButton = ({ children, path, onClick }) => {
   const isActive = location.pathname === path;
 
   const linkClasses = isMobile ? "w-full" : "w-32";
-  const baseClasses = "text-slate-300 border-b-2 border-slate-800 hover:bg-slate-700";
+  const baseClasses = "text-slate-200 border-b-2 border-slate-600 hover:bg-slate-600";
   const buttonClasses = isMobile
-    ? `${baseClasses} w-full h-20 bg-slate-800 hover:border-b-2 hover:border-slate-200`
+    ? `${baseClasses} w-full h-20 bg-slate-600 hover:border-b-2 hover:border-slate-200`
     : `${baseClasses} w-32 h-20 hover:border-b-2 hover:border-slate-200`;
-  const classes = isActive ? `${buttonClasses} bg-slate-700 border-b-2 border-slate-200` : buttonClasses;
+  const classes = isActive ? `${buttonClasses} bg-slate-600 border-b-2 border-slate-200` : buttonClasses;
 
   return (
     <Link to={path} className={linkClasses}>
@@ -68,7 +68,7 @@ const Menu = () => {
 
   return (
     isMobile ? (
-      <div className="flex h-20 w-full items-center bg-slate-800 drop-shadow-xl">
+      <div className="flex h-20 w-full items-center bg-slate-700 drop-shadow-xl">
         <div className="flex flex-col w-full max-w-[768px] items-center">
           <button className="h-20 w-full ml-8" onClick={handleOnClick}>
             <BiMenu color="white" size="32px" />
@@ -81,13 +81,14 @@ const Menu = () => {
               <MenuButton onClick={handleClose} path="/lessons">Lessons</MenuButton>
               <MenuButton onClick={handleClose} path="/juniors">Juniors</MenuButton>
               <MenuButton onClick={handleClose} path="/recordings">Recordings</MenuButton>
+              <MenuButton onClick={handleClose} path="/events">Events</MenuButton>
               <MenuButton onClick={handleClose} path="/misc">Misc</MenuButton>
             </div>
           )}
         </div>
       </div>
     ) : (
-      <div className="flex h-20 w-full items-center bg-slate-800 drop-shadow-xl">
+      <div className="flex h-20 w-full items-center bg-slate-700 drop-shadow-xl">
         <div className="flex mx-auto max-w-[1280px] items-center">
           <MenuButton path="/">Home</MenuButton>
           <MenuButton path="/league">League</MenuButton>
@@ -95,6 +96,7 @@ const Menu = () => {
           <MenuButton path="/lessons">Lessons</MenuButton>
           <MenuButton path="/juniors">Juniors</MenuButton>
           <MenuButton path="/recordings">Recordings</MenuButton>
+          <MenuButton path="/events">Events</MenuButton>
           <MenuButton path="/misc">Misc</MenuButton>
         </div>
       </div>
@@ -106,7 +108,7 @@ const Layout = () => (
   <>
     <Header />
     <Menu />
-    <div className="bg-slate-300 w-full grow">
+    <div className="bg-slate-100 w-full grow">
       <main role="main" className="w-full p-8 mx-auto max-w-[1280px]">
         <Outlet />
       </main>

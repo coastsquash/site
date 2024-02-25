@@ -7,6 +7,7 @@ import {
 
 import Layout from "./components/Layout";
 import {
+  Events,
   Home,
   Juniors,
   League,
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
       <Route path="lessons" element={<Lessons />} />
       <Route path="juniors" element={<Juniors />} />
       <Route path="recordings" element={<Recordings />} />
+      <Route path="events" element={<Events />} />
       <Route path="misc" element={<Misc />} />
     </Route>,
   ),

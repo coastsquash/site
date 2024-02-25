@@ -1,12 +1,23 @@
+import { EmailLink, PhoneLink } from "../components";
 import { Panel } from "../components/Panel";
 
 const Juniors = () => (
   <Panel title="Juniors">
     <Panel.Section>
-      Junior squash is an active, fun filled opportunity to learn the game of squash and increase
-      fitness levels for children. This program will involve introduction to the game/rules,
-      technical development as well as match play. Participants will be divided according to age
-      and skill levels.
+      <p>
+        Each year, Murray hosts Junior squash Lessons at the Gibsons Community
+        Centre. This takes place each Wednesday afternoon/night in the Fall
+        (October – December) and in the Winter (January – March). 4pm-5pm is
+        for beginners and 5pm-6pm of for intermediates. Junior age is considered
+        8 years up to 17 years old. Cost is $85 for 10 sessions.
+      </p>
+      <p>
+        For additional information:
+      </p>
+      <ul className="list-disc px-8">
+        <li><EmailLink to="mujsmith34@gmail.com" /></li>
+        <li><PhoneLink to="604-885-7438" /></li>
+      </ul>
     </Panel.Section>
     <Panel.Section className="mt-4 gap-2">
       <p>
@@ -19,7 +30,6 @@ const Juniors = () => (
       <ul className="list-disc px-8">
         <li>All Ages</li>
         <li>Court 1 and 2 Gibsons & Area Community Centre</li>
-        <li>October 11, 2023 to December 13, 2023 4:00 PM - 5:00 PM 1 hour$85.00</li>
       </ul>
     </Panel.Section>
     <Panel.Section className="mt-4 gap-2">
@@ -30,7 +40,6 @@ const Juniors = () => (
       <ul className="list-disc px-8">
         <li>All Ages</li>
         <li>Court 1 and 2 Gibsons & Area Community Centre</li>
-        <li>October 11, 2023 to December 13, 2023 5:00 PM - 6:00 PM 1 hour $85.00</li>
         <li>Instructors: Murray Smith and Todd Clark</li>
       </ul>
     </Panel.Section>

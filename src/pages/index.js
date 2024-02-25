@@ -1,3 +1,4 @@
+export { default as Events } from "./Events";
 export { default as Home } from "./Home";
 export { default as League } from "./League";
 export { default as Members } from "./Members";
