@@ -29,8 +29,8 @@ const MenuButton = ({ children, path, onClick }) => {
   const linkClasses = isMobile ? "w-full" : "w-32";
   const baseClasses = "text-slate-200 border-b-2 border-slate-600 hover:bg-slate-600";
   const buttonClasses = isMobile
-    ? `${baseClasses} w-full h-20 bg-slate-600 hover:border-b-2 hover:border-slate-200`
-    : `${baseClasses} w-32 h-20 hover:border-b-2 hover:border-slate-200`;
+    ? `${baseClasses} w-full h-16 bg-slate-600 hover:border-b-2 hover:border-slate-200`
+    : `${baseClasses} w-32 h-16 hover:border-b-2 hover:border-slate-200`;
   const classes = isActive ? `${buttonClasses} bg-slate-600 border-b-2 border-slate-200` : buttonClasses;
 
   return (
@@ -68,13 +68,13 @@ const Menu = () => {
 
   return (
     isMobile ? (
-      <div className="flex h-20 w-full items-center bg-slate-700 drop-shadow-xl">
+      <div className="flex h-16 w-full items-center bg-slate-700 drop-shadow-xl">
         <div className="flex flex-col w-full max-w-[768px] items-center">
-          <button className="h-20 w-full ml-8" onClick={handleOnClick}>
+          <button className="h-16 w-full ml-8" onClick={handleOnClick}>
             <BiMenu color="white" size="32px" />
           </button>
           {isOpen && (
-            <div className="absolute top-20 w-full">
+            <div className="absolute top-16 w-full">
               <MenuButton onClick={handleClose} path="/">Home</MenuButton>
               <MenuButton onClick={handleClose} path="/league">League</MenuButton>
               <MenuButton onClick={handleClose} path="/members">Members</MenuButton>
@@ -88,7 +88,7 @@ const Menu = () => {
         </div>
       </div>
     ) : (
-      <div className="flex h-20 w-full items-center bg-slate-700 drop-shadow-xl">
+      <div className="flex h-16 w-full items-center bg-slate-700 drop-shadow-xl">
         <div className="flex mx-auto max-w-[1280px] items-center">
           <MenuButton path="/">Home</MenuButton>
           <MenuButton path="/league">League</MenuButton>

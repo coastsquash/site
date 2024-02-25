@@ -59,7 +59,7 @@ const Members = () => (
     <Panel.Section title="Member request">
       <p>
         To view a list of players on the sunshine coast email
-        <EmailLink className="mx-1" email="coastsquash@gmail.com" inline>
+        <EmailLink className="mx-1" to="coastsquash@gmail.com" inline>
           coastsquash@gmail.com
         </EmailLink>
         requesting the list.
@@ -69,7 +69,7 @@ const Members = () => (
       {/* <SignUpForm /> */}
       <p>
         To be added to the list send an email to
-        <EmailLink className="mx-1" email="coastsquash@gmail.com" inline>
+        <EmailLink className="mx-1" to="coastsquash@gmail.com" inline>
           coastsquash@gmail.com
         </EmailLink>
         with the following information.
